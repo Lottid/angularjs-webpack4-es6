@@ -1,0 +1,13 @@
+<div class="bw_nav_box">
+    <ul class="bw_nav_list">
+        <li class="nav_li"  ng-repeat="nav in navDirectory"  ng-class="{'active': navUrl === nav.setUrl}" ng-if="nav.isEnable">
+            <a href="javascript:" ng-click="changeSub($event,nav)">{{nav.name}}</a>
+            <ul ng-if="nav.isSubset">
+                <li ng-repeat="item in nav.items" ng-if="item.isEnable" ng-click="changeSub($event,item)" ng-class="{active: item.url === navUrl}">
+                    <a  href="javascript:" >{{item.name}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <label ng-bind-html="msgContent|trustHtml"></label>
+</div>

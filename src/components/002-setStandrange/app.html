@@ -1,0 +1,30 @@
+<div id="standRangeView">
+  <div crumbs seccurmbs="100199"></div>
+  <div class="setStep">
+    <img style="width:100%;" src="./img/step1.png" alt="">
+  </div>
+  <div class="standWrap">
+    <div title data="titleConfig" cid="123456" version="1.0" block="全面质检" page="standRange"></div>
+    <div class="standCon">
+      <div class="nameWrap">
+        <span>考核方案名称</span>
+        <input class="standName" type="text" placeholder="请输入考核标准名称，例如2018年综合考核">
+      </div>
+      <div class="nameWrap">
+        <span>参与考核酒店</span>
+        <radios data="radioData" active="{{active}}" change="selChange({key:key})" inline="1"></radios>
+      </div>
+      <div mask-box des="{{des}}" height="20" allscreen="1">
+        <img ng-if="active=='1'" class="imgSrc" style="height: 327px;" src="./img/2_2.jpg" alt="" ng-mouseleave="showTask=false"
+          ng-mouseover="showTask=true">
+        <img ng-if="active!='1'" class="imgSrc" style="height: 327px;" src="./img/2_1.jpg" alt="" ng-mouseleave="showTask=false"
+          ng-mouseover="showTask=true">
+      </div>
+    </div>
+    <div class="standFoot">
+      <a href="#/standList">上一步</a>
+      <a href="#/setFrame">下一步</a>
+    </div>
+    <comment ctitle="留言" cplaceholder="请留言" block="全面质检" version="1.0" pages="standRange"></comment>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="transWrap">
+    <div ng-transclude ng-mouseleave="showTask=false"  ng-mouseover="showTask=true"></div>
+    <div  ng-show="showTask" ng-mouseleave="showTask=false"  ng-mouseover="showTask=true"   class="taskWrap" ng-style="{top:masktop}" >
+        <div ng-style="{height:'{{height+'px'}}',marginTop:mt}" class="desWrap" ng-mouseleave="showTask=false"  ng-mouseover="showTask=true" >{{des}}</div>
+        <div class="mask"></div>
+    </div>
+</div>

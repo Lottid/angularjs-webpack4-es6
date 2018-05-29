@@ -1,0 +1,15 @@
+_drafts/
+_site/
+node_modules/
+logs/*.log*
+commands/
+.idea/
+etc
+.DS_Store
+npm-debug.log
+*.swp
+agentx.json
+nohup.out
+agentx.json
+filemaps.json
+build/

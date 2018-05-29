@@ -1,0 +1,92 @@
+*{color: #2C3337; margin:0; padding:0;}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+button,
+input,
+textarea,
+th,
+td{margin: 0; padding: 0;}
+h1{font-size: 18px;}
+h2{font-size: 16px;}
+h3{font-size: 14px;}
+h4,
+h5,
+h6{font-size: 100%;}
+address,
+cite,
+dfn,
+em,
+var{font-style: normal;}
+code,
+kbd,
+pre,
+samp,
+tt{font-family: "Arial,Courier New", Courier, monospace;}
+small{font-size: 12px;}
+ul,
+ol,
+li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+abbr[title],
+acronym[title]{border-bottom: 1px dotted; cursor: help;}
+q:before,
+q:after{content: '';}
+legend{color: #000;}
+fieldset,
+img{border: none;}
+button,
+input,
+select,
+textarea{font-size: 100%;}
+table{border-collapse: collapse; border-spacing: 0;}
+hr{border: none; height: 1px;}
+html{overflow-y: auto; overflow-x: auto;}
+.clearfix{display: block;}
+.clearfix:after{height: 0; content: "."; visibility: hidden; clear: both; font-size: 0; display: block;}
+input{outline: none}
+.bold{font-weight: bold;}
+.fl{float: left;}
+.fr{float: right;}
+.textalin{text-align: center;}
+body,
+button,
+input,
+select,
+textarea {font: 12px/1  Arial;}
+body {
+    background: #F3F3F3;
+}
+
+.Group_btn{ position:fixed; top:90px; right:-1px; z-index:11; width:40px; height:80px; padding-top:10px; line-height:18px; font-size:14px; font-weight:bold; color:#fff; background:#666; opacity:0.6; filter:alpha(opacity=60); text-align:center; cursor:pointer; border-radius:2px;}
+
+/*GroupCompany_box  集团管理*/
+.GroupCompany_box{ display:none;  position:fixed; top:90px; right:10px; max-width:920px; height:auto; padding-bottom:30px;   border:1px solid #ddd; box-shadow:0px 0px 10px #eaeaea inset; box-shadow:0 0 20px #ccc; background:#f9f9f9;z-index: 1100;}
+.GroupCompany_box h1{  padding-left:20px; margin-bottom:10px; height:50px; line-height:50px; font-family:"Microsoft YaHei"; font-size:21px; color:#666; background:#fff; border-bottom:1px solid #eee; font-weight:lighter;}
+.close_grcombtn{ position:absolute; right:10px; top:-5px;   font-family:"SimSun";  font-size:48px; color:#eee; font-weight:lighter; }
+.close_grcombtn:hover{  color:#666;}
+.Groupcl h2{ padding-left:20px; height:40px;  background:#77abde;}
+.Groupcl h2 a{line-height:40px; color:#fff; font-size:18px;  font-family:"Microsoft YaHei"; font-weight:lighter;}
+/*.grcom_left{ position:absolute; top:100px; left:0; width:160px; height:650px;background:url(GroupCompany_box_leftbg_03.png) no-repeat 60px 10px;}*/
+.grcom_right{ margin-left:60px; margin-right:15px; height:auto; overflow:hidden;  }
+.grcom_right h3{ padding-left:20px; height:40px; background:#fff; }
+.grcom_right h3 a{ line-height:40px; font-size:14px; color:#666;}
+.grcom_ul{ display:block; height:auto; overflow:hidden; padding-bottom:5px; background:#f1f1f1; border:1px solid #eaeaea; box-shadow:0px 0 5px #eaeaea inset;}
+.grcom_ul li{ display:block; /*float:left;*/ margin-right:10px; padding-left:15px; height:35px; line-height:35px;}
+.grcom_ul li a{ color:#77abde;}

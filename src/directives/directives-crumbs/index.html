@@ -1,0 +1,8 @@
+<div class="path" ng-show="!NODE_EMBED">
+    <p>
+        <span ng-if="home"><a href="javascript:">{{home|T}}</a>&gt;&nbsp;</span>
+        <span class="spanIndex"><a href="javascript:">{{'100211'|T}}</a></span>
+        <span ng-if="seccurmbs">&gt;&nbsp;<a href="javascript:">{{seccurmbs|T}}</a></span>
+        <span ng-repeat="c in crumbsData track by $index" >&gt;&nbsp;<a href="javascript:" style="cursor: default;" ng-class="{true:'curr', false:''}[$last]">{{c|T}}</a></span>
+    </p>
+</div>

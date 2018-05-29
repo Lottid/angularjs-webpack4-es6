@@ -1,0 +1,8 @@
+<div class="standTitle clearfix">
+    <span class="title">{{data.title}}</span>
+    <span ng-if="data.smallTip" class="smallTip">{{data.smallTip}}</span>
+    <set-fabulous ng-if="data.isFab" fabulous="data.isFab" version="{{version}}" block="{{block}}" page="{{page}}" number="{{number}}"></set-fabulous>
+    <span ng-if="data.hrefs&&data.hrefs.length>0">
+        <a ng-repeat="item in data.hrefs" ng-href="{{item.href}}">{{item.text}}</a>
+    </span>
+</div>

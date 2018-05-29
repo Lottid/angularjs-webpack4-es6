@@ -1,0 +1,31 @@
+.radioWrap{
+  height:20px;
+  padding:5px 0;
+  line-height: 20px;
+  font-size: 14px;
+
+  .pay_list_c1 {
+    width: 16px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+    background-image: url(./img/radio-btn.png);
+    background-repeat: no-repeat;
+    background-position: 0 -29px;
+
+    .radioclass {
+      width:100%;
+      height:100%;
+      opacity: 0;
+      cursor: pointer;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+    }
+
+    &.on {
+      background-position: 0 3px;
+    }
+  }
+}

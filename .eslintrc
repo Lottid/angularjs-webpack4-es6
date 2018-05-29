@@ -1,0 +1,71 @@
+{
+  "globals":
+  {
+    "angular": true,
+    "vapour": true,
+    "helper": true,
+    "util": true,
+    "RMSCONFIG": true,
+    "Util": true,
+    "cookie": true,
+    "_localStorage": true,
+    "_sessionStorage": true,
+    "_getQuest": true,
+    "DH": true,
+    "Highcharts": true,
+    "process":true,
+    "__dirname": true
+  },
+  "rules":
+  {
+    "no-console": 0, 
+    "no-empty": 0,
+    "no-useless-escape":"off",
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-fallthrough": 1,
+    "no-duplicate-case": 2,
+    "import/no-unresolved": 0,
+    "eqeqeq": [
+      2,
+      "smart"
+    ],
+    "indent": [
+      1,
+      2,
+      { "SwitchCase": 1 }
+    ],
+    "quotes": [
+      2,
+      "single",
+      { "allowTemplateLiterals": true }
+    ],
+    "linebreak-style": [
+      0,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "always"
+    ]
+  },
+  "env":
+  {
+    "es6": true,
+    "jquery": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "extends": "eslint:recommended",
+  "ecmaFeatures":
+  {
+    "jsx": true,
+    "modules": true,
+    "module": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions":
+  {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  }
+}

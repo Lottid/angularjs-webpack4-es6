@@ -1,0 +1,40 @@
+.transWrap{
+  position: relative;
+  margin-top: 10px;
+  img{
+    width:100%;
+  }
+  .taskWrap{
+    position:absolute;
+    right:0;
+    left:0;
+    bottom:0;
+    .mask{
+      position:absolute;
+      top:0;
+      width:100%;
+      bottom:0;
+      background-color: #333;
+      opacity: .8;
+      filter:alpha(opacity=80);
+    }
+  }
+
+  .allscreen{
+    top:0;
+  }
+
+  .halfscreen{
+    top:70%;
+  }
+  .desWrap{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    line-height:20px;
+    text-align:center;
+    color:#fff;
+    font-size:16px;
+    z-index: 99;
+  }
+}
