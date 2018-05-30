@@ -55,7 +55,10 @@ export function rewrite(path,dirName,type) {
   let regExportDefault = regExportDefaults(type);
   
   let imports = content.match(regImport);
+  imports = imports||[];
+  console.log(imports,'imports');
   let exports = content.match(regExport);
+  exports = exports||[];
   let newContent = content.replace(regImport,'').replace(regExportDefault,'');
   if(type==='components') {
     exports = content.replace(regExport,'');

@@ -8,12 +8,14 @@ export default angular.module('myApp.${newDirName}', [])
   .name;`;
 }
 export function componentsmplController(newDirName) {
-  return `class ${newDirName}Controller {
-  constructor($scope) {
-    console.log($scope);
+  return `import {Inject} from '../../decorator/index';
+
+@Inject('')
+class ${newDirName}Controller {
+  constructor() {
+    console.log(this);
   }
 }
-${newDirName}Controller.$inject = ['$scope'];
 export default ${newDirName}Controller;`;
 }
 export function componentsmplRouter(newDirName) {
@@ -28,6 +30,7 @@ export function componentsmplRouter(newDirName) {
     return deferred.promise;
   }],
   controller: '${newDirName}Controller',
+  controllerAs: '${newDirName}',
   resolve: {
     load: ['$q', '$ocLazyLoad', function($q, $ocLazyLoad) {
       let deferred = $q.defer();
@@ -67,8 +70,8 @@ function ${newDirName}Directives() {
     scope: {
       data: '='
     },
-    link: function (scope, ele) {
-      console.log(scope, ele);
+    link: function () {
+      console.log('${newDirName}Directives');
     }
   };
 }

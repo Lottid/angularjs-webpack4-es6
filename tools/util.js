@@ -31,7 +31,7 @@ export function returnRegExport(type) {
 export function importTmpls(dirName,type) {
   let Type = firstToUpperCase(type);
   if(type==='components') {
-    return `\r\nimport ${dirName}Router from '../components/${type}-${dirName}/router';`;
+    return `\r\nimport ${dirName}Router from './components/${type}-${dirName}/router';`;
   } else {
     return `\r\nimport ${dirName+Type} from './${type}-${dirName}/index';`;
   }

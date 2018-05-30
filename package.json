@@ -25,7 +25,6 @@
   "dependencies": {
     "angular": "1.4.7",
     "angular-ui-router": "^0.4.2",
-    "jQuery": "^1.7.4",
     "oclazyload": "^1.1.0"
   },
   "devDependencies": {
