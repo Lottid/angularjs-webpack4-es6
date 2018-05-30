@@ -2,7 +2,6 @@ import {componentsmpl,componentsmplController,componentsmplRouter,directiveTmpl,
 import {importTmpls,exportTmpls,regImport,regExportDefaults,returnRegExport} from './util';
 
 let fs = require('fs');
-let path = require('path');
 
 export function makeDir(dir,rootDir,dirName,type) {
   if (!fs.existsSync(dir)) {
@@ -35,12 +34,13 @@ export function makeDir(dir,rootDir,dirName,type) {
       fs.writeFileSync(newController, componentsmplController(dirName));
       fs.writeFileSync(router, componentsmplRouter(dirName));
     }
+    console.log(`=============${type}-${dirName}生成完成================`);
   } else {
     if (dirName === 'tmpl') {
       rmdirsSync(dir);
       makeDir(dir,rootDir,dirName,type);
     } else {
-      console.log(`${path.relative(rootDir, dir)} is already!`);
+      console.log(`${type}-${dirName} 已存在`);
     }
   }
 }
@@ -56,7 +56,6 @@ export function rewrite(path,dirName,type) {
   
   let imports = content.match(regImport);
   imports = imports||[];
-  console.log(imports,'imports');
   let exports = content.match(regExport);
   exports = exports||[];
   let newContent = content.replace(regImport,'').replace(regExportDefault,'');
@@ -76,8 +75,9 @@ export function rewrite(path,dirName,type) {
       // console.log('=============res================');
       // console.log(res);
       fs.writeFileSync(path, res);
+      console.log(`=============${type}-${dirName}注册完成================`);
     } else {
-      console.error('该文件已经存在');
+      console.error(`${type}-${dirName}已经注册`);
     }
   } else {
     if(imports.join('').indexOf(importTmpl)===-1&&exports.join('').indexOf(exportTmpl)) {
@@ -85,11 +85,11 @@ export function rewrite(path,dirName,type) {
       exports.push(exportTmpl);
 
       let res = imports.join('') + newContent + `export default function(ngModule) {\r\n  ${exports.join('')}\r\n}`;
-      console.log('=============new================');
       // console.log(res);
       fs.writeFileSync(path, res);
+      console.log(`=============${type}-${dirName}注册完成================`);
     } else {
-      console.error('该文件已经存在');
+      console.error(`${type}-${dirName}已经注册`);
     }
   }
 }
